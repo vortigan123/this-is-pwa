@@ -1,0 +1,32 @@
+.header{width:1920px;
+		height:140px;
+		font-size: 20pt;
+		text-align:center;
+		vertical-align:middle;
+		color: #FFFFFF;
+		background: #000000;
+}
+img{width:250px;
+	float: left;
+}
+.content{width:1920px;
+		height:390px;
+		font-size:14pt;
+		background:#cc9900;
+		color: #FFFFFF;
+}
+.footer{width:1920px;
+		height:550px;
+		font-size:14pt;
+		background: red;
+		color: #FFFFFF;
+		text-decoration:none;
+}
+.text{position:absolute;
+	left:300px;
+	font-family:"FANTASY";
+}
+.contact-box{
+    display: flex;
+    justify-content: space-around;
+}
