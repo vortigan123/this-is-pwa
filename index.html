@@ -1,6 +1,8 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
 <link rel=stylesheet href="style.css">
+<link rel="manifest" href="manifest.json">
 <title> Леонов АЭ2203</title>
 <script src="bucky.js"> </script>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
@@ -30,10 +32,28 @@
 <div class="footer">
 Самый известный модельный ряд:
 <ul>
-<li><a href="file:///C:/Users/Admin/OneDrive/Рабочий%20стол/Практика/Сайты/Porsche%20918%20Spyder.html">Porsche 918 Spyder</a></li>
-<li><a href="file:///C:/Users/Admin/OneDrive/Рабочий%20стол/Практика/Сайты/Porsche%20356.html">Porsche 356</a></li>
-<li><a href="file:///C:/Users/Admin/OneDrive/Рабочий%20стол/Практика/Сайты/Porsche%20911%20Carrera%20RS.html">Porsche 911 Carrera RS</a></li>
-<li><a href="file:///C:/Users/Admin/OneDrive/Рабочий%20стол/Практика/Сайты/Porsche%20mission%20e.html">Porsche Mission E</a></li>
+<li><a href="Porsche 918 Spyder.html">Porsche 918 Spyder</a></li>
+<li><a href="Porsche 356.html">Porsche 356</a></li>
+<li><a href="Porsche 911 Carrera RS.html">Porsche 911 Carrera RS</a></li>
+<li><a href="Porsche mission e.html">Porsche Mission E</a></li>
 </div>
+<script src="app.js"></script>
+<script>
+       if ('serviceWorker' in navigator) {
+           window.addEventListener('load', function() {
+               navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+                   // Registration was successful
+               console.log('ServiceWorker registration successful with scope: ', registration.scope);
+             }, function(err) {
+               // registration failed :(
+               console.log('ServiceWorker registration failed: ', err);
+             }).catch(function(err) {
+               console.log(err)
+             });
+           });
+         } else {
+           console.log('service worker is not supported');
+         }
+   </script>
 </body>
 </html>
